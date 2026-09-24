@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro — Amor Animal ONG</title>
+  <meta name="description" content="Cadastre-se para adotar um animal, ser voluntário, oferecer lar temporário ou fazer doações para a Amor Animal ONG.">
+  <link rel="icon" type="image/png" href="assets/icones/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700&family=Mulish:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="cabecalho">
+    <div class="container">
+      <a href="index.html" class="marca">
+        <img src="assets/imagens/logo.png" alt="Logotipo Amor Animal ONG">
+        Amor Animal ONG
+      </a>
+
+      <nav aria-label="Navegação principal">
+        <ul class="menu-principal">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="index.html#sobre">Sobre nós</a></li>
+          <li><a href="projetos.html">Projetos</a></li>
+          <li><a href="index.html#adocao">Adoção</a></li>
+          <li><a href="cadastro.html" class="ativo">Cadastro</a></li>
+          <li><a href="index.html#contato">Contato</a></li>
+        </ul>
+      </nav>
+
+      <button class="botao-menu" aria-label="Abrir menu de navegação" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="banner-pagina">
+      <div class="container">
+        <h1>Faça parte dessa causa</h1>
+        <p>Preencha o formulário abaixo para adotar, ser voluntário, oferecer lar temporário ou apoiar com doações.</p>
+      </div>
+    </section>
+
+    <section class="secao">
+      <div class="container" style="max-width: 860px;">
+
+        <div id="mensagem-sucesso" class="caixa-sucesso" role="status" aria-live="polite"></div>
+
+        <form class="formulario" id="formulario-cadastro" novalidate>
+
+          <fieldset>
+            <legend>Dados pessoais</legend>
+
+            <div class="campo">
+              <label for="nome-completo">Nome completo</label>
+              <input type="text" id="nome-completo" name="nome-completo" required aria-required="true">
+              <span class="mensagem-erro" id="erro-nome-completo"></span>
+            </div>
+
+            <div class="linha-campos duas">
+              <div class="campo">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" required aria-required="true">
+                <span class="mensagem-erro" id="erro-email"></span>
+              </div>
+              <div class="campo">
+                <label for="telefone">Telefone</label>
+                <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" required aria-required="true">
+                <span class="mensagem-erro" id="erro-telefone"></span>
+              </div>
+            </div>
+
+            <div class="linha-campos duas">
+              <div class="campo">
+                <label for="cpf">CPF</label>
+                <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00" required aria-required="true">
+                <span class="mensagem-erro" id="erro-cpf"></span>
+              </div>
+              <div class="campo">
+                <label for="data-nascimento">Data de nascimento</label>
+                <input type="date" id="data-nascimento" name="data-nascimento" required aria-required="true">
+                <span class="mensagem-erro" id="erro-data-nascimento"></span>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Endereço</legend>
+
+            <div class="linha-campos duas">
+              <div class="campo">
+                <label for="cep">CEP</label>
+                <input type="text" id="cep" name="cep" placeholder="00000-000" required aria-required="true">
+                <span class="mensagem-erro" id="erro-cep"></span>
+              </div>
+              <div class="campo">
+                <label for="endereco">Endereço</label>
+                <input type="text" id="endereco" name="endereco" required aria-required="true">
+                <span class="mensagem-erro" id="erro-endereco"></span>
+              </div>
+            </div>
+
+            <div class="linha-campos tres">
+              <div class="campo">
+                <label for="numero">Número</label>
+                <input type="text" id="numero" name="numero" required aria-required="true">
+                <span class="mensagem-erro" id="erro-numero"></span>
+              </div>
+              <div class="campo">
+                <label for="cidade">Cidade</label>
+                <input type="text" id="cidade" name="cidade" required aria-required="true">
+                <span class="mensagem-erro" id="erro-cidade"></span>
+              </div>
+              <div class="campo">
+                <label for="estado">Estado</label>
+                <select id="estado" name="estado" required aria-required="true">
+                  <option value="">Selecione</option>
+                  <option value="AC">AC</option><option value="AL">AL</option><option value="AP">AP</option>
+                  <option value="AM">AM</option><option value="BA">BA</option><option value="CE">CE</option>
+                  <option value="DF">DF</option><option value="ES">ES</option><option value="GO">GO</option>
+                  <option value="MA">MA</option><option value="MT">MT</option><option value="MS">MS</option>
+                  <option value="MG">MG</option><option value="PA">PA</option><option value="PB">PB</option>
+                  <option value="PR" selected>PR</option><option value="PE">PE</option><option value="PI">PI</option>
+                  <option value="RJ">RJ</option><option value="RN">RN</option><option value="RS">RS</option>
+                  <option value="RO">RO</option><option value="RR">RR</option><option value="SC">SC</option>
+                  <option value="SP">SP</option><option value="SE">SE</option><option value="TO">TO</option>
+                </select>
+                <span class="mensagem-erro" id="erro-estado"></span>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Interesse</legend>
+
+            <div class="campo grupo-obrigatorio">
+              <label id="rotulo-interesse">Tipo de interesse</label>
+              <div class="grupo-opcoes" role="radiogroup" aria-labelledby="rotulo-interesse">
+                <label class="opcao-radio"><input type="radio" name="tipo-interesse" value="adocao" required> Adoção</label>
+                <label class="opcao-radio"><input type="radio" name="tipo-interesse" value="voluntariado"> Voluntariado</label>
+                <label class="opcao-radio"><input type="radio" name="tipo-interesse" value="lar-temporario"> Lar temporário</label>
+                <label class="opcao-radio"><input type="radio" name="tipo-interesse" value="doacao"> Doação</label>
+              </div>
+              <span class="mensagem-erro" id="erro-interesse"></span>
+            </div>
+
+            <div class="campo grupo-obrigatorio">
+              <label id="rotulo-animal">Tipo de animal de interesse</label>
+              <div class="grupo-opcoes" role="radiogroup" aria-labelledby="rotulo-animal">
+                <label class="opcao-radio"><input type="radio" name="tipo-animal" value="cachorro" required> Cachorro</label>
+                <label class="opcao-radio"><input type="radio" name="tipo-animal" value="gato"> Gato</label>
+                <label class="opcao-radio"><input type="radio" name="tipo-animal" value="outro"> Outro</label>
+              </div>
+              <span class="mensagem-erro" id="erro-animal"></span>
+            </div>
+
+            <div class="linha-campos duas">
+              <div class="campo">
+                <label id="rotulo-outros-animais">Possui outros animais?</label>
+                <div class="grupo-opcoes" role="radiogroup" aria-labelledby="rotulo-outros-animais">
+                  <label class="opcao-radio"><input type="radio" name="outros-animais" value="sim"> Sim</label>
+                  <label class="opcao-radio"><input type="radio" name="outros-animais" value="nao"> Não</label>
+                </div>
+              </div>
+              <div class="campo">
+                <label id="rotulo-espaco">Possui espaço adequado para o animal?</label>
+                <div class="grupo-opcoes" role="radiogroup" aria-labelledby="rotulo-espaco">
+                  <label class="opcao-radio"><input type="radio" name="espaco-adequado" value="sim"> Sim</label>
+                  <label class="opcao-radio"><input type="radio" name="espaco-adequado" value="nao"> Não</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="campo">
+              <label for="mensagem">Mensagem / observações <span class="opcional">(opcional)</span></label>
+              <textarea id="mensagem" name="mensagem" aria-label="Mensagem ou observações adicionais" placeholder="Conte um pouco sobre você ou tire suas dúvidas..."></textarea>
+            </div>
+          </fieldset>
+
+          <div class="campo aceite">
+            <input type="checkbox" id="aceite-termos" name="aceite-termos" required aria-required="true">
+            <label for="aceite-termos" style="margin:0;">Li e aceito os termos de uso e a política de privacidade da Amor Animal ONG.</label>
+          </div>
+          <span class="mensagem-erro" id="erro-aceite"></span>
+
+          <div class="acoes-formulario">
+            <button type="submit" class="botao botao-primario">Enviar cadastro</button>
+            <button type="button" class="botao botao-secundario botao-limpar">Limpar</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="container">
+      <div class="grade-rodape">
+        <div>
+          <div class="marca-rodape">
+            <img src="assets/imagens/logo.png" alt="Logotipo Amor Animal ONG">
+            Amor Animal ONG
+          </div>
+          <p>Cuidando, resgatando e conectando animais a famílias responsáveis desde 2014.</p>
+          <div class="rodape-social">
+            <a href="#" aria-label="Amor Animal ONG no Instagram">IG</a>
+            <a href="#" aria-label="Amor Animal ONG no Facebook">FB</a>
+            <a href="#" aria-label="Amor Animal ONG no WhatsApp">WA</a>
+          </div>
+        </div>
+        <div>
+          <h4>Navegação</h4>
+          <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="index.html#sobre">Sobre nós</a></li>
+            <li><a href="projetos.html">Projetos</a></li>
+            <li><a href="cadastro.html">Cadastro</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Participe</h4>
+          <ul>
+            <li><a href="cadastro.html">Adotar um animal</a></li>
+            <li><a href="cadastro.html">Fazer uma doação</a></li>
+            <li><a href="cadastro.html">Ser voluntário</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contato</h4>
+          <ul>
+            <li>contato@amoranimalong.org.br</li>
+            <li>(43) 3255-1234</li>
+            <li>Ibiporã/PR</li>
+          </ul>
+        </div>
+      </div>
+      <div class="rodape-base">
+        <p>&copy; 2026 Amor Animal ONG. Todos os direitos reservados. Projeto fictício desenvolvido para fins educacionais.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="voltar-topo" aria-label="Voltar ao topo da página">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
